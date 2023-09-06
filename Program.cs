@@ -1,5 +1,18 @@
 ﻿using Microsoft.VisualBasic;
 
+/*      
+*--------------------------------------------------------------------
+* 	        File name: VideoGames
+*           Project name: VideoGames
+*--------------------------------------------------------------------
+*           Author’s name and email: Brooke Acevedo acevedob@etsu.edu			
+*           Course-Section: Server Side Web Programming
+*           Creation Date: 09-06-2023
+* -------------------------------------------------------------------
+*/
+
+// A lot of this code was referenced from the pokemon code reference provided to us as an example
+
 namespace VideoGames
 
 {
@@ -37,6 +50,7 @@ namespace VideoGames
                     };
                         
                     // Parsing is used to convert strings of numbers into numbers
+                    // This code was referenced by ChatGPT
                     if (int.TryParse(lineSplitting[2], out int year))
                     {
                         videoGames.Year = year;
@@ -51,6 +65,7 @@ namespace VideoGames
                     videoGames.Genre = lineSplitting[3];
                     videoGames.Publisher = lineSplitting[4];
 
+                    // This code was referenced from ChatGPT
                     if (decimal.TryParse(lineSplitting[9], out decimal globalSales))
                     {
                         videoGames.GlobalSales = globalSales;
